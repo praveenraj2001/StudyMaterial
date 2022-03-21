@@ -23,10 +23,15 @@ T Swap(T* A, T* B){
 }
 
 int main()
-{ int k = 10, l = 11, m = 10, n = 11;
+{ float k = 10.1, l = 11.11;
+int m = 10, n = 11;
     cout<<k<< " "<<l<<" \n";
     Swap(&k,&l);
     cout<<k<< " "<<l<<" \n";
+
+    cout<<m<< " "<<n<<" \n";
+    Swap(&m,&n);
+    cout<<m<< " "<<n<<" \n";
 
     return 0;
 }
