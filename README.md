@@ -29,10 +29,9 @@
 | Sending ⇾ Pass by value  Receiving ⇾ value, Sending ⇾ Pass by Address  Receiving ⇾ Pointer|Sending ⇾ Pass by value Receiving ⇾ value, Sending ⇾ Pass by Address Receiving ⇾ Pointer, Sending ⇾ Pass by reference Receiving ⇾ Address|
 | No Default arguments | Default arguments (only at right side variable) |
 
-### namespace ⇾ This means we can use same function names but to access functions in namespace we have to use scope resolution operator
+### namespace ⇾ This means we can use same function names but to access functions in namespace we have to use scope resolution operator (name mangling different when we use function overloading in C++)
 ### l-value - Memory Locatable Variables
 ### r-value - No Memory Location / Left side of assignment expression
-### name mangling different when we use function overloading in C++
 ### To use same function for different data types we use __ Templates __
 
 ----
