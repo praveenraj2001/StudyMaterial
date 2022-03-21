@@ -29,11 +29,11 @@
 | Sending ⇾ Pass by value  Receiving ⇾ value, Sending ⇾ Pass by Address  Receiving ⇾ Pointer|Sending ⇾ Pass by value Receiving ⇾ value, Sending ⇾ Pass by Address Receiving ⇾ Pointer, Sending ⇾ Pass by reference Receiving ⇾ Address|
 | No Default arguments | Default arguments (only at right side variable) |
 
-namespace ⇾ Here we can use Same names for different codes
-l-value - Memory Locatable Variables
-r-value - No Memory Location / Left side of assignment expression
-name mangling different when we use function overloading in C++
-To use same function for different data types we use __ Templates __
+### namespace ⇾ Here we can use Same names for different codes
+### l-value - Memory Locatable Variables
+### r-value - No Memory Location / Left side of assignment expression
+### name mangling different when we use function overloading in C++
+### To use same function for different data types we use __ Templates __
 
 ----
 ```
