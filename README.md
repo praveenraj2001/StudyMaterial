@@ -36,6 +36,7 @@
 ### To use same function for different data types we use __ Templates __
 
 ----
+## Code for SWAP
 ```
 #include <iostream>
 
@@ -71,6 +72,7 @@ int main()
 }
 ```
 ----
+## Code for Classes and Objects
 ```
 // Program to illustrate the working of
 // objects and class in C++ Programming
