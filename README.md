@@ -36,7 +36,7 @@ name mangling different when we use function overloading in C++
 To use same function for different data types we use __ Templates __
 
 ----
-
+```
 #include <iostream>
 
 using namespace std;
@@ -69,8 +69,9 @@ int main()
 
     return 0;
 }
-
+```
 ----
+```
 // Program to illustrate the working of
 // objects and class in C++ Programming
 
@@ -115,4 +116,5 @@ int main() {
 
     return 0;
 }
+```
 ----
