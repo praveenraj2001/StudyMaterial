@@ -8,7 +8,7 @@
  * OOP
 
 # Track B
- * C++, Linux, Python(OOP) --> Team Project (5 Per Group)
+ * C++, Linux, Python(OOP) ⇾ Team Project (5 Per Group)
   * Bharath will invite to GitHub Repo
   * Incremental - SDLC, CI/CD, Analysis
   * Individual Activities
@@ -26,10 +26,10 @@
 | Size of char (4bytes) | Size of char (1bytes) |
 | Datatypes(Bool not included) | Datatypes(Bool not included) |
 | Pass by value, Pass by Address | Pass by value, Pass by Address, Pass by reference(int& B = A;) |
-| Sending --> Pass by value , Receiving --> Sending --> Pass by Address , Receiving --> |Sending --> Pass by value , Receiving --> Sending --> Pass by Address , Receiving --> Sending --> Pass by reference , Receiving --> |
+| Sending ⇾ Pass by value , Receiving ⇾ value Sending ⇾ Pass by Address , Receiving ⇾ Pointer|Sending ⇾ Pass by value , Receiving ⇾ value Sending ⇾ Pass by Address , Receiving ⇾ Pointer Sending ⇾ Pass by reference , Receiving ⇾ Address|
 | No Default arguments | Default arguments (only at right side variable) |
 
-namespace --> Here we can use Same names for different codes
+namespace ⇾ Here we can use Same names for different codes
 l-value - Memory Locatable Variables
 r-value - No Memory Location / Left side of assignment expression
 name mangling different when we use function overloading in C++
