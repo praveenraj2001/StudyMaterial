@@ -24,7 +24,7 @@
 | No Data Hiding | Data Hiding (Acces Specifiers) |
 | Dynamic Memory allocations(Malloc calloc) | Dynamic Memory allocations(new, delete) |
 | Size of char (4bytes) | Size of char (1bytes) |
-| Datatypes(Bool not included) | Datatypes(Bool not included) |
+| Datatypes(Bool not included) | Datatypes(Bool included) |
 | Pass by value, Pass by Address | Pass by value, Pass by Address, Pass by reference(int& B = A;) |
 | Sending ⇾ Pass by value  Receiving ⇾ value, Sending ⇾ Pass by Address  Receiving ⇾ Pointer|Sending ⇾ Pass by value Receiving ⇾ value, Sending ⇾ Pass by Address Receiving ⇾ Pointer, Sending ⇾ Pass by reference Receiving ⇾ Address|
 | No Default arguments | Default arguments (only at right side variable) |
