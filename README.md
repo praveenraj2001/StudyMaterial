@@ -134,4 +134,110 @@ int main() {
  * Copy Constructor
 
 ## Default Constructor
- 
+ * Default constructor is the constructor which doesn’t take any argument. It has no parameters.
+
+ ```
+#include <iostream>
+using namespace std;
+
+class construct
+{
+public:
+	int a, b;
+
+	// Default Constructor
+	construct()
+	{
+		a = 10;
+		b = 20;
+	}
+};
+
+int main()
+{
+	// Default constructor called automatically
+	// when the object is created
+	construct c;
+	cout << "a: " << c.a << endl
+		<< "b: " << c.b;
+	return 1;
+}
+
+ ```
+
+## Parameterized Constructor
+ * It is used to initialize the various data elements of different objects with different values when they are created (Can be Overloaded) .
+
+```
+#include <iostream>
+using namespace std;
+
+class Point
+{
+private:
+	int x, y;
+
+public:
+	// Parameterized Constructor
+	Point(int x1, int y1)
+	{
+		x = x1;
+		y = y1;
+	}
+
+	int getX()
+	{
+		return x;
+	}
+	int getY()
+	{
+		return y;
+	}
+};
+
+int main()
+{
+	// Constructor called
+	Point p1(10, 15);
+
+	// Access values assigned by constructor
+	cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY();
+
+	return 0;
+}
+
+```
+
+## Copy Constructor
+ * A copy constructor is a member function which initializes an object using another object of the same class.
+```
+#include<iostream>
+using namespace std;
+
+class Point
+{
+private:
+	int x, y;
+public:
+	Point(int x1, int y1) { x = x1; y = y1; }
+
+	// Copy constructor
+	Point(const Point &p1) {x = p1.x; y = p1.y; }
+
+	int getX()		 { return x; }
+	int getY()		 { return y; }
+};
+
+int main()
+{
+	Point p1(10, 15); // Normal constructor is called here
+	Point p2 = p1; // Copy constructor is called here
+
+	// Let us access values assigned by constructors
+	cout << "p1.x = " << p1.getX() << ", p1.y = " << p1.getY();
+	cout << "\np2.x = " << p2.getX() << ", p2.y = " << p2.getY();
+
+	return 0;
+}
+
+```
