@@ -72,6 +72,9 @@ int main()
 ```
 ----
 ## Code for Classes and Objects
+
+### __Class__ is a collection of data members and member functions to access in we will need object
+### __Object__ is an instance of a class
 ```
 // Program to illustrate the working of
 // objects and class in C++ Programming
