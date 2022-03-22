@@ -73,8 +73,9 @@ int main()
 ----
 ## Code for Classes and Objects
 
-### __Class__ is a collection of data members and member functions to access in we will need object
+### __Class__ is a user defined datatype and collection of data members and member functions, to access it we will need object (class is an encapsulation user defined datatype)
 ### __Object__ is an instance of a class
+
 ```
 // Program to illustrate the working of
 // objects and class in C++ Programming
@@ -122,3 +123,15 @@ int main() {
 }
 ```
 ----
+# Constructor
+ * A constructor is a special type of member function
+ * Constructor is automatically called when object is created
+ * Constructor has same name as the class itself
+
+# Constructor Types
+ * Default Constructor
+ * Parameterized Constructor
+ * Copy Constructor
+
+## Default Constructor
+ 
