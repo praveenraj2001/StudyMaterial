@@ -77,9 +77,6 @@ int main()
 ### __Object__ is an instance of a class
 
 ```
-// Program to illustrate the working of
-// objects and class in C++ Programming
-
 #include <iostream>
 using namespace std;
 
