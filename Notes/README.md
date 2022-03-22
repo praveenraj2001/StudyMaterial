@@ -1,6 +1,11 @@
 
 # StudyMaterial
 
+# Some nice points
+ ## Pointer
+  * pointer and variable to which pointer is pointing should have same data type 
+  * Because To acces value we have to user same data type for pointer and vairable (For Dereferencing)
+
 # Essentials of Object oriented concepts using c++
  * Objects & Classes 
  * Operator Overloading 
