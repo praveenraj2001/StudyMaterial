@@ -1,6 +1,9 @@
 
 # StudyMaterial
 
+# File Type
+ * .cxx extension has more Generic than .cpp
+
 # Some nice points
  ## Pointer
   * pointer and variable to which pointer is pointing should have same data type 
