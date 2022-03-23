@@ -35,7 +35,7 @@
 | Sending ⇾ Pass by value  Receiving ⇾ value, Sending ⇾ Pass by Address  Receiving ⇾ Pointer|Sending ⇾ Pass by value Receiving ⇾ value, Sending ⇾ Pass by Address Receiving ⇾ Pointer, Sending ⇾ Pass by reference Receiving ⇾ Address|
 | No Default arguments | Default arguments (only at right side variable) |
 
-### namespace ⇾ This means we can use same function names but to access functions in namespace we have to use scope resolution operator (name mangling different when we use function overloading in C++)
+### namespace ⇾ This means we can use same function names but to access functions in namespace we have to use scope resolution operator (::) (name mangling different when we use function overloading in C++)
 ### l-value - Memory Locatable Variables
 ### r-value - No Memory Location / Left side of assignment expression
 ### To use same function for different data types we use __ Templates __
@@ -79,7 +79,7 @@ int main()
 ----
 ## Code for Classes and Objects
 
-### __Class__ is a user defined datatype and collection of data members and member functions, to access it we will need object (class is an encapsulation user defined datatype)
+### __Class__ is a user defined datatype and collection of data members and member functions, to access it we will need object (class is an encapsulation (wraping up data members and member functions into single unit) user defined datatype)
 ### __Object__ is an instance of a class
 
 ```
@@ -125,6 +125,18 @@ int main() {
     return 0;
 }
 ```
+---
+| Class | Structure |
+| --- | --- |
+| Class are of reference type | Structs are of value types |
+| Memory allocation in Heap (can be changed to stack too) | Memory allocation in stack |
+| Class is generally used in large programs | Struct are used in small programs |
+| Classes can contain constructor or destructor | no constructor or destructor |
+| inheretance allowed | inheretance not allowed |
+| Access apecifiers (__By default private__) | __only public by default__ |
+| Function member of the class can be virtual or abstract | Function member of the struct cannot be virtual or abstract |
+---
+
 ----
 # Constructor
  * A constructor is a special type of member function
@@ -244,3 +256,35 @@ int main()
 }
 
 ```
+# Operator Overloading
+ * we can make operators to work for user defined classes. This means C++ has the ability to provide the operators with a special meaning for a data type, this ability is known as operator overloading
+
+ ```
+ #include<iostream>
+using namespace std;
+
+class Complex {
+private:
+	int real, imag;
+public:
+	Complex(int r = 0, int i = 0) {real = r; imag = i;}
+	
+	// This is automatically called when '+' is used with
+	// between two Complex objects
+	Complex operator + (Complex const &obj) {
+		Complex res;
+		res.real = real + obj.real;
+		res.imag = imag + obj.imag;
+		return res;
+	}
+	void print() { cout << real << " + i" << imag << '\n'; }
+};
+
+int main()
+{
+	Complex c1(10, 5), c2(2, 4);
+	Complex c3 = c1 + c2;
+	c3.print();
+}
+
+ ```
