@@ -43,6 +43,8 @@
 ### r-value - No Memory Location / Left side of assignment expression
 ### To use same function for different data types we use __ Templates __
 
+# Comparision B/w value, reference variable , pointer
+
 ```
 int a = 10;
 int &b = a;
@@ -53,7 +55,7 @@ int *p = &a;
 |var|add | val|
 |---|---|---|
 |a|0xf..| 10|
-|ptr|AB1..| 0xf..|
+|ptr|0Xf34..| 0xf..|
 |b|0xf..| 10|
 ----
 ## Code for SWAP
