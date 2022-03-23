@@ -2,7 +2,7 @@
 # StudyMaterial
 
 # File Type
- * .cxx extension has more Generic than .cpp
+ * .cxx extension is more Generic than .cpp
 
 # Some nice points
  ## Pointer
