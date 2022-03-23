@@ -311,27 +311,28 @@ int main()
   ```
 #include <iostream>
 #include <string>
+using namespace std;
 
 const double CALL_RATE = 1.0;
 
 class Customer {
   int id;
-  std::string name;
-  std::string phone;
+  string name;
+  string phone;
   double balance;
 
 public:
-  /*Customer(int x, std::string nstr, std::string pstr, double y) {
-    std::cout << id << "," << name << "'" << phone << "," << balance << "\n";
+  /*Customer(int x, string nstr, string pstr, double y) {
+    cout << id << "," << name << "'" << phone << "," << balance << "\n";
     id = x;         //asignment, not init
     name = nstr;
     phone = pstr;
     balance = y;
   }*/
-  Customer(int x, std::string nstr, std::string pstr,double y):id(x),name(nstr),phone(pstr),balance(y) { //directly initilize when constructor is created (True initilization)
-    std::cout << id << "," << name << "'" << phone << "," << balance << "\n";
+  Customer(int x, string nstr, string pstr,double y):id(x),name(nstr),phone(pstr),balance(y) { //directly initilize when constructor is created (True initilization)
+    cout << id << "," << name << "'" << phone << "," << balance << "\n";
   }
-  Customer(int x, std::string nstr, std::string pstr):id(x),name(nstr),phone(pstr),balance(500) { }
+  Customer(int x, string nstr, string pstr):id(x),name(nstr),phone(pstr),balance(500) { }
   Customer():id(0),name(""),phone(""),balance(0) {}
   Customer(const Customer& ref):id(ref.id),name(ref.name),phone(ref.phone),balance(ref.balance) {}
   void makeCall(int nmins) { balance -= nmins * CALL_RATE; }
