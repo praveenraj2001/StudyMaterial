@@ -79,7 +79,7 @@
 ## File system calls
 * open(const *pathname, int flags);
 * open(const *pathname, int flags, mode_t mode);
-* This system call opens file specified by pathname if the specified sile doesn't exists it may operationally (if O_CREATE is apecified in flags)
+* This system call opens file specified by pathname if the specified file doesn't exists it may operationally (if O_CREATE is specified in flags)
 
 ## Fork System Call
 * fork() is a system call which is used to create child process
