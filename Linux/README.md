@@ -1,5 +1,5 @@
-
-# StudyMaterial Linux
+# By Manju and Praveen
+# StudyMaterial Linux 
 * Printf is defined in standard C library 
 * memory mapping is stored in .out file
 * .out
@@ -9,6 +9,12 @@
 * Path types
     * Absolute : From root 
     * Reelative : from current Directory
+
+# Special Purpose Registers
+* Program counter
+* PSW/Flags
+* Stack Pointer
+* Frame / Base pointer
 
 * GNU (Not Unix) : Initiated by __Richard M stallman__
 * Linux (man ls) : written by __Richard M stallman and David MacKenzie__ 
@@ -86,7 +92,7 @@
 
 |perror|printf|
 |---|---|
-| It is a Library Call | It is executab;e program or Shell commands |
+| It is a Library Call | It is executable program or Shell commands |
 |prints a system error message|prints only our message|
 |writes to stderror|writes to stdout|
 |Non buffered (prints immediatly)|Buffered (prints when hits\n)|
@@ -98,7 +104,7 @@
 * Kernel maintains process list table in form of double linked list 
 * Each process has a unique ID(pid)
 
-* Preemption (if the CPU resource is forcefully taken then it is Preemption)
+* Preemption (Whenever the time is completed the CPU might stop the process forcefully This time is known as quantum or time slice)
 
 * process table is maintained by Kernal
 
@@ -117,7 +123,7 @@
 * To start process in Background use & symbol in commands (eg: cat filename.txt __&__)
 * To check different process that are running in background use (__jobs__)
 * To switch process from background to foreground use (__fg__)
-* To terminate a process we use kill -9 <PID>
+* To terminate a process we use kill -9 <P.I.D>
     * Here -9 is SUREKILL
 * To get process id (PID) and to get parent Process id (PPID) 
 
@@ -128,7 +134,7 @@
 ## __init__ process is considered as the  Origin of Linux Process Hierarchy
 * __pstree__ command will give process ID tree
 * __top__ command will give CPU and Memory utilisation
-* __pgrep__ command is used to search process (eg: pgrap ./a.out)
+* __pgrep__ command is used to search process (eg: pgrep a.out)
 * kill is used to kill the process
 
 ## Zombie Process
@@ -148,3 +154,127 @@
 ## WEXITSTATUS
 * The status variable has some extra informantion along with exit status 
 * to only get exit status we use WEXITSTATUS(status)
+
+## exec
+* If we want to execute a different executable file then we use exec, #include <unistd.h>
+* all commands (excel,excelp,excle,execv,execvp,execvpe)
+* syntax : execl(char *pathname, const char *arg);
+    * execl("/usr/bin/ls", "ls",args....,NULL);
+* syntax : execlp(char *filename, const char *arg);
+    * execlp("ls", "ls",args....,NULL);
+* syntax : execvp(char *filename, const char *arg[]);
+    * char* arggs[] = "cp file1.txt file2.txt" 
+    * execvp("cp", arggs);
+
+## Command Line argunemts
+* int main(int args,char* argv[]){}
+
+# ABI (Application Binary Interface)
+* Identify System call number
+* Save user mode context
+* store system call number in a register
+* store parameter in other General Purpose Register
+* call the trap instruction
+
+# Signals 
+* It always Operates at process level 
+* Signal communicates between application at user level
+* used for communication of abnormal termination
+* __Signals are considered as software interrupts but there is no vector table__
+* Signals between process
+    * SENDER (sends signals from one process to another)
+    * TARGET (will set corresponding bit based on senders's signal bit)
+* target will look-up in the signal handler table for handler address for each of the signal handler
+
+* Process Descriptor (PD) / Process Control Block (PCB) has signal related fields
+* Mose of the  default signal handlers will cause abnormal termination
+
+* __to get all the signals available in the system use (kill -l) Command__
+
+|Signal Name|Description|
+|---|---|
+|SIGINT|User sends Interrupt (ctrl + c)|
+|SIGQUIT|User sends QUIT signal(ctrl + \ )|
+|SIGTSTP|User sends SUSPEND signal(ctrl + z)|
+|SIGTERM|User sends TERMINATION signal (kill <p.i.d>)|
+|SIGCHLD|Child Process stopped|
+|SIGFPE|Floating Point Exception|
+|SIGCONT|resum process|
+|SIGSEGV|null pointer exception(segmentation error)|
+
+* Custom handlers can override the default handler
+
+# Non Maskable Signals
+* Have No custom Handlers
+* SIGKILL, SIGSTOP
+
+## kill command
+* syntax : kill <signal_number> <PID(process ID)>
+    * eg: kill -9 183, here -9 is SIGKILL and 183 is process id
+* for information about using kill as function in code, use in cmd (__man 2 kill__) for information
+* for types of kill refer command (man kill)
+
+# Threads
+* They are various sub-activities within application
+* They are refered as Light Weight Process (LWP)
+* Multiple threads running concurrently
+* Threads have seperate thread control block
+
+## Note Important:
+* Threads have same Code and Data files but different registers and Stack
+* Private/ local data is not shared
+* If any one thread makes a blocking call, whole process gets blocked
+* to use threads use (-lpthread), Eg: ( gcc filename.c -lpthread )
+
+## Significance of threads
+* Concurrent execution
+* Resource sharing
+* Child process will have own resources, but threads will have shared resources
+* Scheduled threads interchangebly use cpu based on time sharing
+* Faster than fork
+* __Every Process is run initially as a single thread then multiple threads spawn__
+
+## Types of Threads
+* User Threads
+    * Threads used by application programmers above kernel , __without kernel support__
+* Kernel Threads
+    * Supported within Kernel performs multiple simultaneous tasks to serve multiple kernel system calls
+
+## Models
+* Used to map user threads to kernel threads
+* MANY-TO-ONE : Threads management is handled by thread library in user space
+* ONE-TO-ONE : Limitaion is the count of threads that can be created
+* MANY-TO-MANY
+
+## POSIX (Portable Operating System Information Xchange)
+* These are application / user level threads
+* Commands (pthread_create,pthread_join,pthread_self,pthread_equal,pthread_yeild,pthread_cancel)
+
+## Some Useful Commands 
+* PWD -> Present Working Directory
+* whoami -> user(prints user name)
+* ~ -> gives absolute path
+* echo $PATH -> It will chow all the executable files Directories that are there
+* uname -a -> to get the name of operating system (i.e. GNU/Linux) with some additional information
+* uname -o -> to get only operating system name
+* mv -> to rename file
+* where is pwd -> to know PWD executable file path
+
+## File syntax
+* OPEN:
+    * syntax :  int open(const char *pathname, int flags, mode_t mode);
+    * eg: open("filename",O_WRONLY,0666)
+
+* READ:
+    *  ssize_t read(int fd, void *buf, size_t count);
+    * eg: read(fd, buf, length);
+
+* WRITE
+    * syntax :  ssize_t write(int fd, void *buf, size_t count);
+    * write(fd,buf,length);
+    * To print on Console replace fd with 1
+
+* CLOSE
+    * syntax : int close(int fd);
+    * eg: close (fd);
+# Check out examples in gealearn after comlpetion of reading this file
