@@ -103,6 +103,7 @@
 * Every process has its own independence stack
 * Kernel maintains process list table in form of double linked list 
 * Each process has a unique ID(pid)
+![img1](https://user-images.githubusercontent.com/64356812/161424339-62f577b3-339b-4d7f-b6c1-a75c56f594c2.png)
 
 * Preemption (Whenever the time is completed the CPU might stop the process forcefully This time is known as quantum or time slice)
 
