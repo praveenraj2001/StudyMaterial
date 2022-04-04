@@ -85,7 +85,7 @@
 * fork() is a system call which is used to create child process
 * Duplicate resources from parent to child
 * __In parent process fork() returns non zero value(mostly child ID)__
-* __In chile process fork() returns zero__
+* __In child process fork() returns zero__
 * It will execute lines after fork()
 * Parent and Child will run concurrently according to architecture
 * USE getpid() function for child USE getppid() function for parent process
