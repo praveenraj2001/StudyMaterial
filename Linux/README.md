@@ -188,7 +188,7 @@
 * target will look-up in the signal handler table for handler address for each of the signal handler
 
 * Process Descriptor (PD) / Process Control Block (PCB) has signal related fields
-* Mose of the  default signal handlers will cause abnormal termination
+* Most of the  default signal handlers will cause abnormal termination
 
 * __to get all the signals available in the system use (kill -l) Command__
 
