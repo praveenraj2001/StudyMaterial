@@ -141,7 +141,7 @@
 ## Zombie Process
 *  Process which completed the execution but still have entry in Process Table
 
-## Deamon Process
+## Demon Process
 * Process that runs in the backgrounds
 
 ## waitpid()
