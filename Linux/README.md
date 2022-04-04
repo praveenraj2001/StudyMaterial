@@ -88,7 +88,7 @@
 * __In child process fork() returns zero__
 * It will execute lines after fork()
 * Parent and Child will run concurrently according to architecture
-* USE getpid() function for child USE getppid() function for parent process
+* USE getpid() function to get current process ID USE getppid() function for parent process ID
 
 |perror|printf|
 |---|---|
