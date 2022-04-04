@@ -121,7 +121,7 @@
     * Occurs on interrupts or system call or preemption 
 
 # Process Commands in terminal
-* To start process in Background use & symbol in commands (eg: cat filename.txt __&__)
+* To start process in Background, use "&" symbol in commands (eg: cat filename.txt __&__)
 * To check different process that are running in background use (__jobs__)
 * To switch process from background to foreground use (__fg__)
 * To terminate a process we use kill -9 <P.I.D>
