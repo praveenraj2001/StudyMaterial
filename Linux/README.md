@@ -158,7 +158,7 @@
 
 ## exec
 * If we want to execute a different executable file then we use exec, #include <unistd.h>
-* all commands (excel,excelp,excle,execv,execvp,execvpe)
+* all commands (execl,execlp,execle,execv,execvp,execvpe)
 * syntax : execl(char *pathname, const char *arg);
     * execl("/usr/bin/ls", "ls",args....,NULL);
 * syntax : execlp(char *filename, const char *arg);
