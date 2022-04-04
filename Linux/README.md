@@ -255,7 +255,7 @@
 * PWD -> Present Working Directory
 * whoami -> user(prints user name)
 * ~ -> gives absolute path
-* echo $PATH -> It will chow all the executable files Directories that are there
+* echo $PATH -> It will show all the executable files Directories that are there
 * uname -a -> to get the name of operating system (i.e. GNU/Linux) with some additional information
 * uname -o -> to get only operating system name
 * mv -> to rename file
