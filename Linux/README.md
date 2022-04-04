@@ -115,7 +115,7 @@
 * Context Saving
     * Copy Data from CPU to SAVE AREA
 * Context Loaading
-    * Copy Data from SAVE AREA
+    * Copy Data from SAVE AREA to CPU
 * Context Switching
     * Combination of context saving and context loading  
     * Occurs on interrupts or system call or preemption 
