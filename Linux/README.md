@@ -44,7 +44,7 @@
 * It is a program that links CPU & Memory
 
 ## Kernal Types 
-* Monolithic Kernal
+* Monolithic Kernal (linux is monolithic kernal)
     * User and Kernal services implemented under same address space
 
 * Micro Kernal (For Embedded boards)
