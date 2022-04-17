@@ -6,5 +6,5 @@
 |Ordered|Ordered|Ordered|Unordered (Data is stored in key-value pair)|
 |Lists are mutable|Tuples are are immutable|Sets are mutable and no duplicate elements|Dictionaries are mutable and keys do not allow duplicates|
 |Square braces|Parenthesis|Curly brackets|Curly brackets with key-value pair|
-|append() adds item at end|immutable|add() adds a given element to set| update() updates with specified key-value pair|
+|append() adds item at end|immutable(can add new values but can't change existing)|add() adds a given element to set| update() updates with specified key-value pair|
 |pop() removes the item at given index and returns it|immutable|pop() method removes a random item from the set|pop() method removes the specified item from the dictionary|
